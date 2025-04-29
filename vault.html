@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Vault - Tab Guardian</title>
+  <link rel="stylesheet" href="styles/vault.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="icons/icon128.png" alt="Tab Guardian" class="logo">
+      <h1>Tab Vault</h1>
+    </div>
+    <div class="actions">
+      <select id="filterSelect">
+        <option value="all">All Tabs</option>
+        <option value="manual">Manually Closed</option>
+        <option value="auto-declutter">Auto Decluttered</option>
+        <option value="manual-add">Manually Added</option>
+        <option value="locked">Locked Tabs</option>
+      </select>
+      <button id="clearVaultBtn" class="btn-danger">Clear Vault</button>
+    </div>
+  </header>
+  
+  <div class="add-url-container">
+    <form id="addUrlForm">
+      <input type="url" id="urlInput" placeholder="Enter URL to add to vault" required>
+      <input type="text" id="titleInput" placeholder="Title (optional)">
+      <button type="submit" id="addUrlBtn" class="btn-primary">Add to Vault</button>
+    </form>
+  </div>
+  
+  <div class="vault-container">
+    <div id="tabList" class="tab-list"></div>
+    <div id="emptyState" class="empty-state" style="display: none;">
+      <p>Your tab vault is empty</p>
+    </div>
+  </div>
+  
+  <script src="vault.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Guardian</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon128.png" alt="Tab Guardian" class="logo">
+      <h1>Tab Guardian</h1>
+    </header>
+
+    <div class="section current-tab-controls">
+      <h2>Current Tab</h2>
+      <div id="passwordStatusContainer" class="password-status">
+        <span id="passwordStatus">No global password set</span>
+        <a href="options.html" target="_blank" class="small-link">Change</a>
+      </div>
+      <div class="form-group">
+        <button id="lockCurrentBtn" class="btn btn-lock">🔒 Lock This Tab</button>
+      </div>
+      <button id="stealthModeBtn" class="btn btn-stealth">👁️ Stealth Mode</button>
+      <div id="stealthOptions" class="stealth-options" style="display:none">
+        <input type="text" id="stealthTitle" placeholder="Custom title (e.g., Loading...)" class="form-control">
+        <button id="applyStealthBtn" class="btn btn-apply">Apply</button>
+      </div>
+    </div>
+
+    <div class="section auto-declutter">
+      <h2>Auto Declutter</h2>
+      <button id="declutterNowBtn" class="btn btn-clean">🧹 Clean Up Now</button>
+      
+      <div class="form-group">
+        <label for="inactiveThreshold">Close tabs inactive for:</label>
+        <select id="inactiveThreshold" class="form-control">
+          <option value="0.0083">30 seconds (testing)</option>
+          <option value="0.0167">1 minute (testing)</option>
+          <option value="0.0833">5 minutes (testing)</option>
+          <option value="1">1 hour</option>
+          <option value="6">6 hours</option>
+          <option value="24" selected>1 day</option>
+          <option value="72">3 days</option>
+          <option value="168">1 week</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="closeDuplicatesCheck" checked>
+          Close duplicate tabs
+        </label>
+      </div>
+    </div>
+
+    <div class="section tab-vault">
+      <h2>Tab Vault</h2>
+      <button id="tabVaultBtn" class="btn btn-vault">📜 View Tab Vault</button>
+      <button id="unlockAllBtn" class="btn btn-secondary">🔓 Unlock All Locked Tabs</button>
+    </div>
+
+    <footer>
+      <a href="options.html" target="_blank" class="settings-link">⚙️ Settings</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

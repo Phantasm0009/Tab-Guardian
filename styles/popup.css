@@ -1,0 +1,210 @@
+:root {
+  --primary-color: #4a6da7;
+  --secondary-color: #39518d;
+  --accent-color: #ff5c5c;
+  --text-color: #333333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #888888;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --border-radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--medium-gray);
+  padding-bottom: 10px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.section {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-lock {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-lock:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-stealth {
+  background-color: var(--dark-gray);
+  color: white;
+  margin-top: 8px;
+}
+
+.btn-stealth:hover {
+  background-color: #666;
+}
+
+.btn-clean {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-clean:hover {
+  background-color: #e54545;
+}
+
+.btn-vault {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-vault:hover {
+  background-color: #3e8e41;
+}
+
+.btn-secondary {
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  margin-top: 8px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--medium-gray);
+}
+
+.btn-apply {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 8px;
+}
+
+input[type="password"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.password-input {
+  margin-top: 8px;
+}
+
+.stealth-options {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+footer {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.settings-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.settings-link:hover {
+  text-decoration: underline;
+}
+
+.password-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.password-set {
+  color: #4CAF50;
+}
+
+.password-missing {
+  color: var(--accent-color);
+}
+
+.small-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.small-link:hover {
+  text-decoration: underline;
+}

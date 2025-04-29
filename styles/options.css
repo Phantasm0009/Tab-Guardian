@@ -1,0 +1,256 @@
+:root {
+  --primary-color: #4a6da7;
+  --secondary-color: #39518d;
+  --accent-color: #ff5c5c;
+  --text-color: #333333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #888888;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --border-radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--medium-gray);
+  padding-bottom: 16px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--medium-gray);
+  margin-bottom: 24px;
+}
+
+.tablinks {
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-gray);
+  transition: all 0.2s;
+}
+
+.tablinks:hover {
+  color: var(--primary-color);
+}
+
+.tablinks.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tabcontent {
+  display: none;
+  padding: 4px 0;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+.whitelist-container {
+  display: flex;
+  gap: 10px;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.whitelist-items {
+  list-style-type: none;
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+.whitelist-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-gray);
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  margin-bottom: 6px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-danger {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #e54545;
+}
+
+.feature {
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.about-content {
+  line-height: 1.8;
+}
+
+.about-content ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.links-section {
+  margin-top: 20px;
+}
+
+.links-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.links-section a:hover {
+  text-decoration: underline;
+}
+
+.feedback {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.feedback.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.feedback.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.feedback.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

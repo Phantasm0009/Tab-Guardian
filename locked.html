@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Locked</title>
+  <link rel="stylesheet" href="styles/locked.css">
+</head>
+<body>
+  <div class="lock-container">
+    <div class="lock-icon">🔒</div>
+    <h1>This Tab is Locked</h1>
+    <p>Enter your password to access <span id="domainDisplay">this website</span></p>
+    
+    <div class="password-container">
+      <input type="password" id="passwordInput" placeholder="Enter password" autofocus>
+      <button id="unlockBtn">Unlock</button>
+    </div>
+    
+    <div class="unlock-options">
+      <label class="checkbox-container">
+        <input type="checkbox" id="unlockDomainCheck">
+        <span class="label-text">Unlock domain on all tabs</span>
+      </label>
+    </div>
+    
+    <p id="errorMsg" style="display: none; color: red;">Incorrect password. Please try again.</p>
+  </div>
+  <script src="locked.js"></script>
+</body>
+</html>

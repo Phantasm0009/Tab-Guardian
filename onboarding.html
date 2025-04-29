@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Tab Guardian</title>
+  <link rel="stylesheet" href="styles/onboarding.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon128.png" alt="Tab Guardian" class="logo">
+      <h1>Welcome to Tab Guardian</h1>
+    </header>
+
+    <section class="intro">
+      <h2>Your All-in-One Tab Management Solution</h2>
+      <p>Tab Guardian helps you take control of your browser tabs for better privacy, security and productivity.</p>
+      
+      <div class="benefits">
+        <div class="benefit-item">
+          <div class="icon">🔒</div>
+          <h3>Privacy Protection</h3>
+          <p>Password-protect sensitive tabs from prying eyes</p>
+        </div>
+        <div class="benefit-item">
+          <div class="icon">🧹</div>
+          <h3>Tab Decluttering</h3>
+          <p>Automatically clean up inactive tabs to improve performance</p>
+        </div>
+        <div class="benefit-item">
+          <div class="icon">📜</div>
+          <h3>Tab History</h3>
+          <p>Never lose important tabs with the Tab Vault</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="passwordProtection">
+      <div class="feature-content">
+        <h2>Password Protection</h2>
+        <p>Lock any tab with a password to keep sensitive information private.</p>
+        <ol class="steps">
+          <li>Click the Tab Guardian icon in your browser toolbar</li>
+          <li>Set a global password in Settings (you only need to do this once)</li>
+          <li>Click "Lock This Tab" on any page you want to protect</li>
+          <li>Your tab is now protected and will require a password to access</li>
+        </ol>
+        <p class="tip"><strong>Pro Tip:</strong> When unlocking a tab, check "Unlock domain on all tabs" to unlock all tabs from the same website.</p>
+      </div>
+      <div class="feature-image">
+        <img src="images/lock-feature.png" alt="Password protection demonstration">
+      </div>
+    </section>
+
+    <section class="feature alt" id="autoDeclutter">
+      <div class="feature-image">
+        <img src="images/declutter-feature.png" alt="Auto declutter demonstration">
+      </div>
+      <div class="feature-content">
+        <h2>Auto Declutter</h2>
+        <p>Keep your browser running smoothly by automatically closing unused tabs.</p>
+        <ol class="steps">
+          <li>Tab Guardian tracks how long it's been since you've used each tab</li>
+          <li>Set your preferred inactive time threshold in Settings</li>
+          <li>Inactive tabs will be automatically closed and saved to the Tab Vault</li>
+          <li>You can whitelist important sites that should never be auto-closed</li>
+        </ol>
+        <p class="tip"><strong>Pro Tip:</strong> Use "Clean Up Now" to manually declutter tabs when your browser feels sluggish.</p>
+      </div>
+    </section>
+
+    <section class="feature" id="tabVault">
+      <div class="feature-content">
+        <h2>Tab Vault</h2>
+        <p>Never lose an important tab again with the Tab Vault history feature.</p>
+        <ol class="steps">
+          <li>All closed tabs are automatically saved to the Tab Vault</li>
+          <li>Click "View Tab Vault" to see your tab history</li>
+          <li>Filter tabs by how they were closed (manual, auto-decluttered, etc.)</li>
+          <li>Easily reopen any tab with a single click</li>
+        </ol>
+        <p class="tip"><strong>Pro Tip:</strong> The Tab Vault makes it safe to be aggressive with tab decluttering since you can always recover closed tabs.</p>
+      </div>
+      <div class="feature-image">
+        <img src="images/vault-feature.png" alt="Tab vault demonstration">
+      </div>
+    </section>
+
+    <section class="feature alt" id="stealthMode">
+      <div class="feature-image">
+        <img src="images/stealth-feature.png" alt="Stealth mode demonstration">
+      </div>
+      <div class="feature-content">
+        <h2>Stealth Mode</h2>
+        <p>Quickly hide tab contents with stealth mode for instant privacy.</p>
+        <ol class="steps">
+          <li>Click "Stealth Mode" in the Tab Guardian popup</li>
+          <li>Enter a custom title to disguise your tab</li>
+          <li>The tab's title and favicon will be replaced with innocent alternatives</li>
+          <li>Perfect for quickly hiding sensitive content when someone walks by</li>
+        </ol>
+        <p class="tip"><strong>Pro Tip:</strong> You can set a default stealth title in the extension settings.</p>
+      </div>
+    </section>
+
+    <section class="keyboard-shortcuts">
+      <h2>Keyboard Shortcuts</h2>
+      <p>Tab Guardian supports keyboard shortcuts for quick access to commonly used features.</p>
+      <div class="shortcuts-container">
+        <div class="shortcut">
+          <div class="keys">Alt+L</div>
+          <div class="action">Lock current tab</div>
+        </div>
+        <div class="shortcut">
+          <div class="keys">Alt+U</div>
+          <div class="action">Unlock all tabs</div>
+        </div>
+        <div class="shortcut">
+          <div class="keys">Alt+S</div>
+          <div class="action">Toggle stealth mode</div>
+        </div>
+      </div>
+      <p class="tip"><strong>Note:</strong> You can customize these shortcuts in Chrome's extension keyboard shortcut settings.</p>
+    </section>
+
+    <section class="get-started">
+      <h2>Get Started Now</h2>
+      <p>Tab Guardian is ready to help you take control of your browser tabs.</p>
+      <div class="actions">
+        <a href="options.html" class="btn primary">Configure Settings</a>
+        <a href="#" class="btn secondary" id="closeOnboarding">Start Using Tab Guardian</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Tab Guardian - Your tabs, protected and organized.</p>
+      <p><a href="privacy-policy.html" target="_blank">Privacy Policy</a></p>
+    </footer>
+  </div>
+  <script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+:root {
+  --primary-color: #4a6da7;
+  --secondary-color: #39518d;
+  --accent-color: #ff5c5c;
+  --text-color: #333333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #888888;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --border-radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.benefit-item {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.feature.alt {
+  flex-direction: row-reverse;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-image {
+  flex: 1;
+  text-align: center;
+}
+
+.feature-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.steps {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.steps li {
+  margin-bottom: 8px;
+}
+
+.tip {
+  background-color: var(--light-gray);
+  padding: 12px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+}
+
+.keyboard-shortcuts {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.shortcuts-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.keys {
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  padding: 8px 16px;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.action {
+  font-size: 14px;
+}
+
+.get-started {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: var(--light-gray);
+  color: var(--text-color);
+}
+
+.btn.secondary:hover {
+  background-color: var(--medium-gray);
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .feature, .feature.alt {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .feature-image {
+    order: -1;
+  }
+  
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .benefit-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Guardian Settings</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon128.png" alt="Tab Guardian" class="logo">
+      <h1>Tab Guardian Settings</h1>
+    </header>
+
+    <div class="tabs">
+      <button class="tablinks active" data-tab="general">General</button>
+      <button class="tablinks" data-tab="advanced">Advanced</button>
+      <button class="tablinks" data-tab="about">About</button>
+    </div>
+
+    <div id="general" class="tabcontent active">
+      <h2>General Settings</h2>
+      <div class="form-group">
+        <label for="autoLock">Auto-lock after inactivity:</label>
+        <select id="autoLock" class="form-control">
+          <option value="0">Disabled</option>
+          <option value="5">5 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="30">30 minutes</option>
+          <option value="60">1 hour</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="globalPassword">Global Password:</label>
+        <input type="password" id="globalPassword" class="form-control" placeholder="Set a global password">
+      </div>
+
+      <div class="form-group">
+        <label>Whitelisted Sites (won't be auto-closed):</label>
+        <div class="whitelist-container">
+          <input type="text" id="whitelistInput" class="form-control" placeholder="e.g., mail.google.com">
+          <button id="addWhitelist" class="btn">Add</button>
+        </div>
+        <ul id="whitelistItems" class="whitelist-items"></ul>
+      </div>
+
+      <button id="saveSettings" class="btn btn-primary">Save Settings</button>
+    </div>
+
+    <div id="advanced" class="tabcontent">
+      <h2>Advanced Features</h2>
+      <div class="feature">
+        <h3>👁️ Stealth Mode</h3>
+        <div class="form-group">
+          <label for="stealthModeToggle">
+            <input type="checkbox" id="stealthModeToggle"> Enable Stealth Mode by default
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="defaultStealthTitle">Default Stealth Title:</label>
+          <input type="text" id="defaultStealthTitle" class="form-control" placeholder="Loading...">
+        </div>
+      </div>
+
+      <div class="feature">
+        <h3>📜 Tab Vault</h3>
+        <div class="form-group">
+          <label for="tabVaultToggle">
+            <input type="checkbox" id="tabVaultToggle"> Automatically save closed tabs
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="vaultRetention">Keep tabs for:</label>
+          <select id="vaultRetention" class="form-control">
+            <option value="7">1 week</option>
+            <option value="30" selected>1 month</option>
+            <option value="90">3 months</option>
+            <option value="365">1 year</option>
+            <option value="0">Forever</option>
+          </select>
+        </div>
+        <button id="clearVaultBtn" class="btn btn-danger">Clear Tab Vault</button>
+      </div>
+
+      <div class="feature">
+        <h3>🧹 Auto Declutter</h3>
+        <div class="form-group">
+          <label for="declutterThreshold">Auto-close tabs inactive for:</label>
+          <select id="declutterThreshold" class="form-control">
+            <option value="0.0083">30 seconds (testing)</option>
+            <option value="0.0167">1 minute (testing)</option>
+            <option value="0.0833">5 minutes (testing)</option>
+            <option value="1">1 hour</option>
+            <option value="3">3 hours</option>
+            <option value="6">6 hours</option>
+            <option value="12">12 hours</option>
+            <option value="24" selected>24 hours</option>
+            <option value="48">2 days</option>
+            <option value="72">3 days</option>
+            <option value="168">1 week</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="maxTabsToKeep">Maximum tabs to keep open:</label>
+          <input type="number" id="maxTabsToKeep" class="form-control" placeholder="0 = no limit" min="0" value="0">
+          <small class="help-text">Set to 0 for no limit</small>
+        </div>
+        <div class="form-group">
+          <label for="minTabsPerDomain">Maximum tabs per domain:</label>
+          <input type="number" id="minTabsPerDomain" class="form-control" min="1" value="3">
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="closeDuplicatesToggle" checked>
+            Close duplicate tabs
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="smartGroupingToggle" checked>
+            Use smart domain grouping
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="respectFormDataToggle" checked>
+            Preserve tabs with form data
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="prioritizeByMemoryToggle">
+            Prioritize closing memory-intensive tabs
+          </label>
+        </div>
+        <button id="resetDeclutterBtn" class="btn btn-secondary">Reset to Default</button>
+      </div>
+    </div>
+
+    <div id="about" class="tabcontent">
+      <h2>About Tab Guardian</h2>
+      <div class="about-content">
+        <p>Version 1.0</p>
+        <p>Tab Guardian helps you protect your privacy and improve productivity by managing your browser tabs.</p>
+        <p>Features:</p>
+        <ul>
+          <li>🔒 Password-protected tabs</li>
+          <li>🧹 Automatic tab decluttering</li>
+          <li>👁️ Stealth mode</li>
+          <li>📜 Tab vault</li>
+        </ul>
+        <p class="links-section">
+          <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
+``` 
